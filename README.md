@@ -12,6 +12,6 @@ Simulation de blockchain
 
 ## Vérification
 ### Comparer les blockchain des noeuds:
-*./diff-blockchain.sh
+* ./diff-blockchain.sh
 ### Vérifier que toutes les opérations des participants sont stockés:
 * ./check-operation.sh
