@@ -59,10 +59,10 @@ public class Operation implements Serializable{
     @Override
     public int hashCode(){
         int hash = 1;
-        hash *= 3 + montant;
-        hash *= 17 + auteur.hashCode();
-        hash *= 17 + destinataire.hashCode();
-        hash *= 19  + date.hashCode();
+        hash = hash * 3 + (int)montant;
+        hash = hash * 17 + auteur.hashCode();
+        hash = hash * 17 + destinataire.hashCode();
+        hash = hash * 19  + date.hashCode();
         return hash;
     }
 

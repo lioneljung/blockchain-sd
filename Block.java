@@ -88,7 +88,7 @@ public class Block implements Serializable{
     public int hashCode(){
         int hash = 1;
         for(int i = 0; i < operationList.size(); i++){
-            hash *= 5 + operationList.get(i).hashCode();
+            hash = hash * 5 + operationList.get(i).hashCode();
         }
         /** 
          * le premier bloc d'une branche/blockchain possède un hash
@@ -96,7 +96,7 @@ public class Block implements Serializable{
          * compte sinon notre hash est aussi nul
          */
         if(hashBlockPrecedent != 0){
-            hash *= 17 * hashBlockPrecedent;
+            hash = hash * 17 + hashBlockPrecedent;
         }
         return hash;
     }

@@ -287,7 +287,7 @@ public class Core extends UnicastRemoteObject implements NoeudBlockServices{
                  */
                 int tmp = blockchain.getBlockByHash(b.getHashBlockPrecedent());
                 if((tmp != -1) &&
-                (b.getOperationList().size() > blockchain.getBlocks().get(tmp).getOperationList().size())){
+                (b.getOperationList().size() > blockchain.getBlocks().get(tmp+1).getOperationList().size())){
                     // le nouveau block contient plus d'opération, on l'ajoute
                     // d'abord on supprime les blocks venant après lui
                     for(int i = tmp+1; i < blockchain.getBlocks().size(); i++){
